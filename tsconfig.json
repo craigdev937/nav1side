@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "Bundler",
+        "strict": true,
+        "jsx": "react-jsx",
+        "noEmit": true,
+        "verbatimModuleSyntax": true,
+        "forceConsistentCasingInFileNames": true,
+        "useDefineForClassFields": true,
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+        "module": "ESNext",
+        "target": "ES2022",
+        "lib": ["DOM", "DOM.Iterable", "ES2023"],
+        "paths": {"@public/*": ["./public/*"]},
+        "types": ["@rsbuild/core/types"]
+    },
+    "exclude": ["node_modules", "dist", "__tests__"],
+    "include": ["src"]
+}
+
+
+
+
