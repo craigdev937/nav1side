@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-import { IoSunnySharp } from "react-icons/io5";
+import { IoSearch, IoSunnySharp } from "react-icons/io5";
 import { FaRegMoon } from "react-icons/fa6";
 import { UAS, UAD } from "../global/Hooks";
 import { toggleTheme } from "../global/ThemeSlice";
@@ -12,8 +12,20 @@ export const Navbar = () => {
     return (
         <React.Fragment>
             <header className={styles.nav__header}>
-                <section>
-                    <input type="search" name="" id="" />
+                <section className={styles.nav__search}>
+                    <IoSearch 
+                        className={styles.search__icon} 
+                        aria-hidden="true"
+                        focusable="false"
+                    />
+                    <input
+                        className={styles.nav__input}
+                        type="search"
+                        name="search"
+                        id="navbar-search"
+                        aria-label="Search"
+                        placeholder="Search…"
+                    />
                 </section>
                 {/* THEME TOGGLE */}
                 <section>
