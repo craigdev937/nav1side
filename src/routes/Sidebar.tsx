@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Sidebar.module.css";
 import { Link, NavLink, Outlet } from "react-router";
 import { SIDE } from "../data/dBase";
+import { Navbar } from "./Navbar";
 
 export const Sidebar = () => {
     const [open, setOpen] = React.useState(false);
@@ -92,6 +93,7 @@ export const Sidebar = () => {
             </section>
 
             <section className={styles.side__content}>
+                <Navbar />
                 <Outlet />
             </section>
         </React.Fragment>
