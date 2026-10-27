@@ -1,7 +1,130 @@
+.com {
+    --comment-muted: color-mix(in oklch, var(--text-main) 68%, var(--bg-main));
+    --comment-border: color-mix(in oklch, var(--text-main) 14%, var(--bg-main));
+    width: 100%;
+    max-width: 90rem;
+    margin-inline: auto;
+    padding: clamp(1rem, 3vw, 3rem);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 .title {
-    background-color: pink;
-    color: black;
-    padding: 0.313rem;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.subtitle {
+    margin-top: 0.625rem;
+    color: var(--comment-muted);
+    line-height: 1.6;
+}
+
+.count {
+    padding: 0.5rem 0.875rem;
+    border: 1px solid var(--comment-border);
+    border-radius: 999px;
+    color: var(--comment-muted);
+    font-size: 0.8125rem;
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    /* Let a single column shrink 
+    below the preferred card width. */
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(min(100%, 18rem), 1fr)
+    );
+    gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    min-width: 0;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    border: 1px solid var(--comment-border);
+    border-radius: 1rem;
+    background: color-mix(in oklch, var(--bg-main) 95%, var(--text-main));
+    box-shadow: 0 0.25rem 1rem color-mix(in oklch, var(--black) 6%, transparent);
+    overflow-wrap: anywhere;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.avatar {
+    display: grid;
+    place-items: center;
+    flex: 0 0 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: var(--gradient);
+    color: var(--white);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.identity {
+    min-width: 0;
+}
+
+.name {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-weight: 650;
+}
+
+.username {
+    margin-top: 0.125rem;
+    color: var(--comment-muted);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+.body {
+    flex: 1;
+    line-height: 1.75;
+}
+
+.metadata {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--comment-border);
+    color: var(--comment-muted);
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.likes {
+    margin-inline-start: auto;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.empty {
+    padding: 2rem 1rem;
+    border: 1px dashed var(--comment-border);
+    border-radius: 1rem;
+    color: var(--comment-muted);
+    text-align: center;
 }
 
 

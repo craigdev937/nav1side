@@ -90,12 +90,10 @@
 
 .side__line:nth-child(odd) {
     left: 0;
-    /* border-radius: 9px 0 0 9px; */
 }
 
 .side__line:nth-child(even) {
     left: 50%;
-    /* border-radius: 0 9px 9px 0; */
 }
 
 .side__line:nth-child(1),
