@@ -23,6 +23,26 @@ export interface IComData {
     comments: ICom[]
 };
 
+export interface IPost {
+    id: number,
+    title: string,
+    body: string,
+    tags: string[],
+    reactions: {
+        likes: number,
+        dislikes: number
+    },
+    views: number,
+    userId: number
+};
+
+export interface IPostData {
+    total: number,
+    skip: number,
+    limit: number,
+    posts: IPost[]
+};
+
 
 
 

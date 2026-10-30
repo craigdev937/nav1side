@@ -4,7 +4,7 @@ import { DUM } from "../../global/DUM";
 import { Spinner } from "../../components/spinner/Spinner";
 
 export const Comments = () => {
-    const { error, isLoading, data } = DUM.useAllQuery();
+    const { error, isLoading, data } = DUM.useComQuery();
     const COM = data?.comments;
 
     if (error) {
@@ -25,10 +25,10 @@ export const Comments = () => {
             ) : (
                 <main className={classes.com}>
                     <header className={classes.header}>
-                        <div>
+                        <aside>
                             <h1 className={classes.title}>Comments</h1>
                             <p className={classes.subtitle}>The latest from the community.</p>
-                        </div>
+                        </aside>
                         <span className={classes.count}>
                             {COM?.length ?? 0} comments
                         </span>

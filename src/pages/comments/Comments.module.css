@@ -1,6 +1,14 @@
 .com {
-    --comment-muted: color-mix(in oklch, var(--text-main) 68%, var(--bg-main));
-    --comment-border: color-mix(in oklch, var(--text-main) 14%, var(--bg-main));
+    --comment-muted: color-mix(
+        in oklch, 
+        var(--text-main) 68%, 
+        var(--bg-main)
+    );
+    --comment-border: color-mix(
+        in oklch, 
+        var(--text-main) 14%, 
+        var(--bg-main)
+    );
     width: 100%;
     max-width: 90rem;
     margin-inline: auto;
@@ -56,8 +64,16 @@
     padding: clamp(1rem, 2vw, 1.5rem);
     border: 1px solid var(--comment-border);
     border-radius: 1rem;
-    background: color-mix(in oklch, var(--bg-main) 95%, var(--text-main));
-    box-shadow: 0 0.25rem 1rem color-mix(in oklch, var(--black) 6%, transparent);
+    background: color-mix(
+        in oklch, 
+        var(--bg-main) 95%, 
+        var(--text-main)
+    );
+    box-shadow: 0 0.25rem 1rem color-mix(
+        in oklch, 
+        var(--black) 6%, 
+        transparent
+    );
     overflow-wrap: anywhere;
 }
 
